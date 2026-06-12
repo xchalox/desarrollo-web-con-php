@@ -23,7 +23,7 @@ class Conexion{
     public function getConnection(){
         try {
             $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->bd, $this->port);
-            mysqli_set_charset($this->connection, 'urf8');
+            mysqli_set_charset($this->connection, 'utf8');
             if (!$this->connection) {
                 throw new Exception(":( Error al conectar " + mysqli_connect_error());
                 
@@ -36,7 +36,7 @@ class Conexion{
     }
     public function closeConnection(){
         if ($this->connection) {
-            mysqli_close($this->connction);
+            mysqli_close($this->connection);
             return 1;
         }
         return 0;

@@ -1,5 +1,5 @@
 <?php
-start_session
+session_start();
 // iniciar o reanudar la sesión del usuario actual
 
 if (!isset($_SESSION['user_id'])) {

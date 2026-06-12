@@ -5,7 +5,7 @@ $project = ['url' => 'desarrollo-web-con-php'];
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="/<?php echo $project ['url'] ?>/dashboard" class="brand-link">
+          <a href="/<?php echo $project ['url'] ?>/backoffice" class="brand-link">
             <!--begin::Brand Image-->
             <img
               src="<?php echo $_SESSION['ruta']['assets'] ?>assets/img/AdminLTELogo.png"

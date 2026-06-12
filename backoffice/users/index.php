@@ -11,10 +11,7 @@ include_once '../mvc/v1/models/usuario.php';
 $modelo = new Usuario();
 $data = $modelo->getAll();
 
-foreach ($data as $registro) {
-  echo '<p>id: '.$registro->getId().' | Apellido: '. $registro->getApellido() .' | activo: '. $registro->isActivo() .''
-;}
-echo '<hr>';
+
 ?>
 
 <!doctype html>

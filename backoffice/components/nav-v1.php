@@ -9,8 +9,8 @@ session_start();
 
 }
 
-//include_once '../mvc/v1/conexion.php';
-//include_once '../mvc/v1/models/usuario.php';
+include_once 'mvc/v1/conexion.php';
+include_once 'mvc/v1/models/usuario.php';
 
 $modelo = new Usuario();
 $data = $modelo->getAll();

@@ -91,7 +91,7 @@ class Usuario {
     public function setFechaCreado($_n){
         $this->datecreate = $_n;
     }
-    public function setActualizado($_n){
+    public function setFechaActualizado($_n){
         $this->dateupdate = $_n;
     }
     public function setActivo($_n){
@@ -104,7 +104,7 @@ class Usuario {
         $query = "SELECT id, firstname, lastname, username, password, rol, datecreate, dateupdate, active FROM usuario ORDER BY id ASC";
         $rs = mysqli_query($con->getConnection(), $query);
         if ($rs) {
-            while ($registro = mysqli_fetch_assoc()) {
+            while ($registro = mysqli_fetch_assoc($rs)) {
                 $registro['active'] = $registro['active'] == 1 ? true : false;
                 $objeto = new Usuario();
                 $objeto->setID($registro['id']);
